@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>best selling perfume at tech.com </title>
+    <link rel="icon" href="j-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>  
+    html {
+  scroll-behavior:smooth;
+}
+body{
+   font-family: 'Source Serif Pro', serif;
+}
+.frm{
+    display: flex;
+    padding: 5px;
+    margin: 8px;
+    align-items: center;
+    justify-content:space-around;
+}
+.m{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+.mb{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    background-color: bisque;
+}
+.mb:hover{
+    color: black;
+    background-color: #ff523b;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 1.8rem;
+}
+
+.logo h2{
+    color: #000;
+    font-size: 2.2rem;
+}
+
+.logo span{
+    color: #ff523b;
+    font-size: 2.2rem;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content:space-around;
+    flex-shrink: 3;
+}
+
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li a:hover{
+    color: #ff523b;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: #555;
+}
+p{
+    font-size: 1.6rem;
+    color: #000;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-1{
+    flex-basis: 48%;
+    min-width: 300px;
+}
+
+.col-2{
+    flex-basis: 48%;
+    min-width: 300px;
+}
+
+.col-2 img{
+    max-width: 100%;
+    /* padding: 5rem 0; */
+}
+
+.col-1 h1{
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #ff523b;
+    color: #fff;
+    margin-top: 1rem;
+    width: 200px;
+    height: 38px;
+    text-align: center;
+    padding: 0.3rem;
+    border-radius: 25px;
+    margin: 1.2rem auto;
+    font-size: 1.5rem;
+    transition: 0.5s ease-in-out;
+}
+
+.btn:hover{
+    background: transparent;
+    color: #ff523b;
+    border: 1.5px solid #ff523b;
+    font-weight: 400;
+}
+
+.header{
+    background: radial-gradient(#fff,#ffd6d6);
+    border-radius: 10px;
+}
+
+.header .row{
+    margin-top: 25px;
+}
+
+.categories{
+    margin: 50px 0;
+    display: flex;
+}
+
+.col{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.col img{
+    width: 100%;height: 470px;
+    border-radius: 15px;
+    border: 3px solid #ff523b;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.categories h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #222;
+}
+
+.categories p{
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 300;
+    padding: 1.5rem 0;
+}
+
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col h3{
+    color: #444;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.col h3 span{
+    color: #ff523b;
+}
+
+.col-4{
+    flex-basis: 23%;
+    /* padding: 1rem; */
+    min-width: 200px;
+    margin-bottom: 1.5rem;
+    transition: 0.4s ease;
+}
+
+.col-4 img{
+    width: 100%;height: 270px;
+    border: 3px solid #ff523b;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title{
+    text-align: center;
+    margin: 45px auto;
+    color: #222;
+    font-size: 2rem;
+    border-bottom: 3px solid #ff523b;
+    width: 70%;
+    margin-bottom: 70px;
+}
+
+.small-container p{
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 3.5rem;
+}
+
+.col-4 h4{
+    text-align: left;
+    color: #000;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+ .col-4 .rating{
+    color: #ff523b;
+    text-align: left;
+}
+
+.col-4 p{
+    color: #000;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.col-4:hover{
+    transform: translateY(-5px);
+}
+
+
+.offer{
+    width: 100%;
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top: 60px;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.offer-img{
+    padding: 50px;
+    width: 70%;
+}
+
+small{
+    color: #555;
+    font-size: 1.2rem;
+}
+
+.col-2 p{
+    text-align: left;
+    font-size: 1.5rem;
+    padding:0;
+    color: #555;
+}
+
+.col-2 h1{
+    color: #222;
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+}
+
+
+/* ------------------testimonials -------------------- */
+.testimonial{
+    padding-top: 10rem;
+}
+
+.col-3{
+    flex-basis: 30%;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.col-3:hover{
+    transform: translateY(-10px);
+}
+
+.col-3 img{
+    width: 50px;
+    margin-top: 1.5rem;
+    border-radius: 50%;
+    border: 0.8px solid #ff523b;
+}
+.col-3 p{
+    font-size: 1.4rem;
+    text-align: left;
+    color: #555;
+}
+
+.col-3 h3{
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #222;
+}
+
+
+.col-3 .rating{
+    color: #ff523b;
+}
+
+.col-3 span{
+    color: #ff523b;
+}
+
+.col-3 .fa-quote-left{
+    color: #ff523b;
+    font-size: 1.8rem;
+}
+
+
+
+
+.footer{
+    background-color: #000;
+    color: #8a8a8a;
+    font-size: 1.4rem;
+    padding: 60px 0 20px;
+}
+
+.footer p{
+    color: #8a8a8a;
+}
+
+.footer h3{
+    color: #fff;
+    margin-bottom: 2.0rem;
+}
+
+.col-6{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1{
+    flex-basis: 30%;
+}
+
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-1 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-col-3 ,.footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+.app-store{
+    margin-top: 20px;
+}
+
+.app-logo img{
+    width: 140px;
+}
+
+
+.copyright{
+    text-align: center;
+    padding-top: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer hr{
+    background: none;
+    height: 1px;
+    color: #8a8a8a;
+}
+
+.f-logo h1{
+    color: #fff;
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+}
+
+.f-logo span{
+    color: #ff523b;
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+
+}
+.footer-col-3 :hover{
+    color: white;
+}
+.footer-col-4 :hover{
+    color:white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+    <form class="frm">
+        <div class="logo">
+        <a><h2 style="margin-bottom: 0;"><i>Tech<span>.ma</span></i></h2><h5 style="margin-top: 0px;margin-left: 4px;">new store new service</h5></a></div>
+        <label><input class="m" type="text" placeholder="what you're hoping to find?">
+        <button class="mb" type="submit">go</button></label>
+    </form>
+    <hr style="width: 70%;">
+    <div class="navbar" >
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <img src="images/cart.png" width="30px" height="30px">
+    </div>
+</div>
+    <div class="categories">
+        <div class="small-container">
+            <h1>Categories</h1>
+            <p>you're going to find anything you want that is about Perfumes in our store</p>
+            <div class="row">
+                <div class="col ">
+                    <img src="parfum-extrait.avif" >
+                    <h3>Parfum or <span>Extrait...</span></h3>
+                </div>
+                <div class="col ">
+                    <img src="photo-1541643600914-78b084683601.avif" >
+                    <h3>Eau de <span>Parfum...</span></h3>
+                </div>
+                <div class="col ">
+                    <img src="colo.jpg">
+                    <h3>Eau de <span>Cologne...</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-container">
+        <h2 class="title">FEATURED PRODUCTS</h2>
+        <p>the most popular and selling one<br>quality Perfumes.</p>
+        <div class="row">
+            <div class="col-4"><a href="savage-buy.html">
+                <img src="sa.jpg">
+                <h4 style="margin-top: 40px;margin-bottom: 60px;">Savage<br></h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <p>MAD 1300.00</p></a>
+            </div>
+            <div class="col-4"><a href="per13.html">
+                <img src="coco.jpg">
+                <h4>Chanel Coco Mademoiselle </h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>MAD 1268.00</p></a>
+            </div>
+            <div class="col-4"><a href="per14.html">
+                <img src="henry.jpg">
+                <h4>Henry Rose Dark is Night</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <p>MAD 1200.00</p></a>
+            </div>
+            <div class="col-4"><a href="pure-buy.html">
+                <img src="fea-pure.jpg">
+                <h4>PURE XS – PACO RABANNE</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>MAD 2000.00</p></a>
+            </div>
+        </div>
+        <h2 class="title">LATEST PRODUCTS</h2>
+        <div class="row">
+            <div class="col-4"><a href="per3.html">
+                <img src="brintby-spears.jpg">
+                <h4>Electric Fantasy Britney Spears</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <p>MAD 2500.00</p></a>
+            </div>
+            <div class="col-4"><a href="per4.html">
+                <img src="tobacco.jpg">
+                <h4>Tobacco Honey Guerlain</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>MAD 4100.00</p></a>
+            </div>
+            <div class="col-4"><a href="per5.html">
+                <img src="maitre.jpg">
+                <h4>Iris Bleu Gris by Maitre Parfumeur</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <p>MAD 1250.00</p></a>
+            </div>
+            <div class="col-4"><a href="per6.html">
+                <img src="ca.jpg">
+                <h4>Xerjoff Italica 2021: Amaretto Biscotti</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <p>MAD 2000.00</p></a>
+            </div> 
+        </div>
+    </div>
+    <!-- --------------- offer --------------- -->
+
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="promo.jpg" class="offer-img">
+                </div>
+                <div class="col-2">
+                    <p>MAD 824.50 <del>MAD 970.00</del></p>
+                    <h1>Encre Noire Lalique for men</h1>
+                    <small>Encre Noire by Lalique is a Woody Aromatic fragrance for men. Encre Noire was launched in 2006. The nose behind this fragrance is Nathalie Lorson. Top note is Cypress; middle note is Vetiver; base notes are Cashmere Wood and Musk.<br></small>
+                    <a href="Credit-Card-Information.html" class="btn">Buy Now &#8594</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------- testimonials -------------- -->
+
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>Thank you, Tech.ma, for always providing quick and efficient customer service. Your team is a pleasure to work with!</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src="images/user-1.png" alt="">
+                    <h3>Khemlata <span>Rani</span></h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>I appreciate the high-quality products and excellent support from Tech.ma. You have made shopping with you a great experience.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src="images/user-2.png" alt="">
+                    <h3> Pankaj     <span>Rajpoot</span></h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>A big thank you to Tech.ma for their expertise and knowledge in helping me find the perfect tech solution. I highly recommend their services!</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <img src="images/user-3.png" alt="">
+                    <h3>Chulbuli <span>Kumari</span></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------- footer -------------------- -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios Mobile Phone.</p>
+                    <div class="app-logo">
+                        <a href="#"><img src="images/play-store.png" alt="play store"></a>
+                        <a href="#"><img src="images/app-store.png" alt="app store"></a>
+                    </div>
+                </div>
+                <div class="col-6 footer-col-2">
+                    <a class="f-logo">
+                        <h1>Tech <span>store</span></h1>
+                    </a>
+                    <p>everything related with Perfumes.</p>
+                </div>
+                <div class="col-6 footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#"> Coupons</a></li>
+                        <li><a href="#"> Blog Post</a></li>
+                        <li><a href="#"> Return Policy</a></li>
+                        <li><a href="#"> Join Affiliates</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Youtube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">copyright-reserved  @Tech store</p>
+        </div>
+    </div>
+</body>
+</html>
